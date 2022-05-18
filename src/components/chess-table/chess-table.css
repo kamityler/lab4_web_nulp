@@ -1,0 +1,58 @@
+.chess-board {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.chess-board th {
+    padding: .5em;
+}
+
+.chess-board td {
+    border: 0px solid;
+    width: 3em;
+    height: 3em;
+}
+
+.chess-board .light {
+    background: rgb(238, 238, 210);
+}
+
+.chess-board .dark {
+    background: rgb(118, 150, 86);
+}
+
+.numeric-font {
+    cursor: default;
+    font-size: 90%;
+    position: absolute;
+}
+
+.dark-font {
+    color: rgb(118, 150, 86);
+}
+
+.light-font {
+    color: rgb(238, 238, 210);
+}
+
+.numeric-pos {
+    position: relative;
+    display: block;
+    margin-left: 0px;
+    margin-top: -50%;
+}
+
+.letter-pos {
+    position: relative;
+    margin-top: 65%;
+    margin-left: 83%;
+    display: block;
+}
+
+img {
+    /* position: absolute; */
+    /* margin-top: -17px; */
+    height: 100%;
+    width: 100%;
+    display: block;
+}
