@@ -1,0 +1,20 @@
+.navbar{
+    background-color: rgb(118, 150, 86);
+}
+
+.nav-link, .navbar-brand, .btn-outline, .nav-link:visited, .navbar-brand:visited, .btn-outline:visited{
+    color: rgb(238, 238, 210);
+}
+
+.nav-link:hover, .navbar-brand:hover, .btn-outline:hover{
+    color:gold;
+}
+
+.nav-link:active, .navbar-brand:active{
+    color:rgb(200, 170, 0);
+}
+
+.btn-outline:active{
+    background-color: gold;
+    color: rgb(118, 150, 86);
+}
