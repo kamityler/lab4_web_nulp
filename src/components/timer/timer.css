@@ -1,5 +1,5 @@
 .border-red {
-    border: solid 5px rgb(219, 82, 82);
+    border: solid 5px gold;
 }
 
 .border-green {
@@ -7,7 +7,10 @@
 }
 
 .outer-timer-block {
-width: 150px;
+    width: 185px;
+    margin:20px;
+    margin-top: 40px;
+
 }
 
 .timer-block {
@@ -24,7 +27,64 @@ width: 150px;
     border-radius: 20px;
 }
 
-.btn-check{
-    background-color: green;
+.btn-group-start{
+    margin-left:5.5%;
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.btn-my{
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 5px;
+}
+
+.btn-success{
+    background-color:rgb(118, 150, 86);
+    margin-right: 15px;
+}
+
+.btn-success:hover{
+    background-color:rgb(96, 123, 69);
+}
+
+.btn-success:active{
+    background-color:rgb(53, 100, 58);
+}
+
+.btn-danger{
+    background-color:gold;
+}
+
+.btn-danger:hover{
+    background-color:rgb(199, 169, 0);
+}
+
+.btn-danger:active{
+    background-color:rgb(160, 136, 0);
+}
+
+.form-check-input:checked{
+    background-color: rgb(118, 150, 86);
+    border: none;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.form-check-input:active{
+    border: 2px solid rgb(96, 123, 69);
+    outline: none !important;
+    box-shadow: none;
+}
+
+.form-check{
+    float:left;
+    margin-right:3px;
 }
 

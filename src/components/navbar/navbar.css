@@ -19,6 +19,13 @@
     color: rgb(118, 150, 86);
 }
 
+.btn-outline:focus{
+    background-color: none;
+    color: rgb(238, 238, 210);
+    outline: none;
+    box-shadow: none;
+}
+
 .logo{
     width: 50px;
     float:left;
