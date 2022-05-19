@@ -1,0 +1,30 @@
+.border-red {
+    border: solid 5px rgb(219, 82, 82);
+}
+
+.border-green {
+    border: solid 5px rgb(118, 150, 86);
+}
+
+.outer-timer-block {
+width: 150px;
+}
+
+.timer-block {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.white-font {
+    color: rgb(41, 83, 0);
+}
+
+.radius-border {
+    border-radius: 20px;
+}
+
+.btn-check{
+    background-color: green;
+}
+
