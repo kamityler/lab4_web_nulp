@@ -12,7 +12,10 @@ class NavBar extends Component{
         return(
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <a class="navbar-brand" href="#">Chess</a>
+                    <a class="navbar-brand" href="#">
+                        <img className="logo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fprochesszone.com%2Fwp-content%2Fuploads%2F2020%2F01%2Flogo_favicon-42.png&f=1&nofb=1" alt="logo chess" width="1%"/>
+                        Chess
+                    </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>

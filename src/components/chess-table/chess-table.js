@@ -4,7 +4,7 @@ function ChessTable(){
 
     return(
         <div className="container">
-            <table className="chess-board">
+            <table className="chess-board table-light">
             <tbody>
                 <tr>
                     <td className="light">

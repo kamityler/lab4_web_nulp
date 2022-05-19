@@ -18,3 +18,9 @@
     background-color: gold;
     color: rgb(118, 150, 86);
 }
+
+.logo{
+    width: 50px;
+    float:left;
+    margin:-10%;
+}

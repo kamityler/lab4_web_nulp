@@ -1,6 +1,8 @@
 .chess-board {
     border-spacing: 0;
     border-collapse: collapse;
+    margin-top: 40px;
+    margin-right: 40px;
 }
 
 .chess-board th {
@@ -44,14 +46,12 @@
 
 .letter-pos {
     position: relative;
-    margin-top: 65%;
+    padding-top: 53%;
     margin-left: 83%;
     display: block;
 }
 
 img {
-    /* position: absolute; */
-    /* margin-top: -17px; */
     height: 100%;
     width: 100%;
     display: block;
