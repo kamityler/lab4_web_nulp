@@ -38,9 +38,9 @@ function ChessTable(){
                     <td className="light"></td>
                     <td className="dark"></td>
                     <td className="light"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/bp.png"
-                            className=".chess-piece" id="pawn" alt="black pawn"/></td>
+                            className="chess-piece pawn" alt="black pawn"/></td>
                     <td className="dark"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/bq.png"
-                        className=".chess-piece" id="queen" alt="black queen"/></td>
+                        className="chess-piece queen" alt="black queen"/></td>
                     <td className="light"></td>
                     <td className="dark"></td>
                 </tr>
@@ -50,20 +50,20 @@ function ChessTable(){
                     </td>
                     <td className="light"></td>
                     <td className="dark"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/wr.png"
-                        className=".chess-piece" id="rook" alt="qwhite rook"/></td>
+                        className="chess-piece rook" alt="qwhite rook"/></td>
                     <td className="light"></td>
                     <td className="dark"></td>
                     <td className="light"></td>
                     <td className="dark"></td>
                     <td className="light"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/bp.png"
-                            className=".chess-piece" id="pawn" alt="ableck pawn"/></td>
+                            className="chess-piece pawn" alt="ableck pawn"/></td>
                 </tr>
                 <tr>
                     <td className="light">
                         <div className="numeric-font numeric-pos dark-font">4</div>
                     </td>
                     <td className="dark"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/br.png"
-                        className=".chess-piece" id="rook" alt="black rook"/></td>
+                        className="chess-piece rook" alt="black rook"/></td>
                     <td className="light"></td>
                     <td className="dark"></td>
                     <td className="light"></td>
@@ -79,12 +79,12 @@ function ChessTable(){
                     <td className="dark"></td>
                     <td className="light"></td>
                     <td className="dark"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/wk.png"
-                        className=".chess-piece" id="king" alt="white kring"/></td>
+                        className="chess-piece king" alt="white kring"/></td>
                     <td className="light"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/wp.png"
-                            className=".chess-piece" id="pawn" alt="white pawn"/></td>
+                            className="chess-piece pawn" alt="white pawn"/></td>
                     <td className="dark"></td>
                     <td className="light"><img src="https://images.chesscomfiles.com/chess-themes/pieces/gothic/150/bk.png"
-                            className=".chess-piece" id="king" alt="black kang"/></td>
+                            className="chess-piece king" alt="black kang"/></td>
                 </tr>
                 <tr>
                     <td className="light">

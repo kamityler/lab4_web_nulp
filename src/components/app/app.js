@@ -3,7 +3,7 @@ import {Component} from 'react'
 import ChessTable from '../chess-table/chess-table';
 import NavBar from '../navbar/navbar';
 import Timer from '../timer/timer';
-// import Chart from '../chart/chart';
+import Chart from '../chart/chart';
 
 import './app.css'
 
@@ -16,7 +16,7 @@ class App extends Component{
                 <div className="row">
                     <div className="col-md-auto"><ChessTable/></div>
                     <div className="col-md-auto"><Timer/></div>
-                    <div className="col-md-auto"></div>
+                    <div className="col-md-auto"><Chart/></div>
                 </div>
 
             </div>

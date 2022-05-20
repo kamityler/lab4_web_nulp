@@ -28,6 +28,7 @@ class Timer extends Component{
     }
 
     gameTimer = () =>{
+        this.changeClass();
         let sec1 = parseInt(this.state.sec)
         const timer = setInterval(()=>{
             this.setState({
@@ -35,13 +36,15 @@ class Timer extends Component{
             });
             --sec1;
             if(parseInt(this.state.sec) <= 1){
+                this.changeClass();
                 clearInterval(timer);
             }
             console.log(this.state.sec);
-        },1000)
+        },100)
 
         if(parseInt(this.state.sec) <= 1){
             clearInterval(timer);
+            this.changeClass();
         }
     }
 
