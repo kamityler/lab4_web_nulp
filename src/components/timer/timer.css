@@ -83,6 +83,12 @@
     box-shadow: none;
 }
 
+.form-check-input:active{
+    border: 2px solid rgb(96, 123, 69);
+    outline: none !important;
+    box-shadow: none;
+}
+
 .form-check{
     float:left;
     margin-right:3px;

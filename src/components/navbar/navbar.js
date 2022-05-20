@@ -3,14 +3,12 @@ import {Component} from 'react'
 import './navbar.css'
 
 class NavBar extends Component{
-    constructor(props){
-        super(props);
-    }
+
     render(){
         return(
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a className="navbar-brand" href="#home">
                         <img className="logo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fprochesszone.com%2Fwp-content%2Fuploads%2F2020%2F01%2Flogo_favicon-42.png&f=1&nofb=1" alt="logo chess" width="1%"/>
                         Шахи
                     </a>
@@ -26,8 +24,8 @@ class NavBar extends Component{
                         <a className="nav-link" href="https://www.chess.com/puzzles/problem/491418">Завдання</a>
                         </li>
                     </ul>
-                    <button class="btn btn-outline me-2" type="button">Зареєструватись</button>
-                    <button class="btn btn-outline" type="button">Ввійти</button>
+                    <button className="btn btn-outline me-2" type="button">Зареєструватись</button>
+                    <button className="btn btn-outline" type="button">Ввійти</button>
                     </div>
                 </div>
             </nav>
