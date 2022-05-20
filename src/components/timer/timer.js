@@ -53,7 +53,7 @@ class Timer extends Component{
         const sec = parseInt(this.state.sec%60);
 
         return(
-            <div className="outer-timer-block" >
+            <div className="outer-timer-block">
                 <div className="timer-block border-red radius-border">
                     <span id="minutes" className="white-font">{min<10?'0'+min:min}</span>
                     <span className="white-font">:</span>
@@ -65,13 +65,13 @@ class Timer extends Component{
                         10хв
                     </label>
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                     <input className="form-check-input" type="radio" name="timer-radio" id="30radio" onClick={()=>{this.setState({sec:60*30})}}/>
                     <label className="form-check-label" htmlFor="30radio">
                         30хв
                     </label>
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                     <input className="form-check-input" type="radio" name="timer-radio" id="60radio" onClick={()=>{this.setState({sec:60*60})}}/>
                     <label className="form-check-label" htmlFor="60radio">
                         60хв
@@ -85,28 +85,5 @@ class Timer extends Component{
         );
     }
 }
-
-
-// function gameTimer() {
-//     const timer = setInterval(updateTimer, 100);
-//     if (leftTime <= 0) {
-//         changeClass(timerBox, 'border-green', 'border-red');
-//         clearInterval(timer);
-//     }
-//     leftTime *= 60;
-
-//     function updateTimer() {
-//         leftTime -= 1;
-//         timerText[0].innerHTML = parseInt(leftTime / 60);
-//         let seconds = leftTime - parseInt(leftTime / 60) * 60;
-//         seconds < 10 ? timerText[2].innerHTML = `0${seconds}` : timerText[2].innerHTML = `${seconds}`;
-//         console.log(leftTime);
-//         if (leftTime <= 0) {
-//             changeClass(timerBox, 'border-green', 'border-red');
-//             clearInterval(timer);
-//         }
-//     }
-// }
-
 
 export default Timer;

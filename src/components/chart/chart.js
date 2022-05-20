@@ -1,68 +1,85 @@
-import { Component } from "react";
+import './chart.css';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js'
+import {Bar} from 'react-chartjs-2'
+import React, {useState, useEffect} from 'react'
 
-import './chart.css'
-
-class Chart extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            chart: true,
-        };
-    }
-
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 
-    render(){
-        const pawns = document.querySelectorAll(".pawn").length,
-            bishops = document.querySelectorAll(".bishop").length,
-            knights = document.querySelectorAll(".knight").length,
-            rooks = document.querySelectorAll(".rook").length,
-            queens = document.querySelectorAll(".queen").length,
-            kings = document.querySelectorAll(".king").length;
-        let myChart = document.querySelector("#my-chart").getContext('2d');
-        const chart = new Chart(myChart, {
-            type: 'bar',
-            data: {
-                labels: ['Pawns', 'Bishops', 'Knights', 'Rooks', 'Queens', 'Kings'],
-                datasets: [{
-                    label: 'Amount',
-                    data: [pawns, bishops, knights, rooks, queens, kings],
-                    // data: [pawns, 3, 2, 1, 5, kings],
-                    backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
-                }]
-            },
-            options: {
+function Chart(props) {
+
+  const [chartData, setChartData] = useState({
+    datasets:[],
+  })
+
+  const [chartOptions, setChartOptions] = useState({});
+
+  useEffect(()=>{
+    setTimeout(() => {
+      const pawns = document.querySelectorAll(".pawn").length,
+        bishops = document.querySelectorAll(".bishop").length,
+        knights = document.querySelectorAll(".knight").length,
+        rooks = document.querySelectorAll(".rook").length,
+        queens = document.querySelectorAll(".queen").length,
+        kings = document.querySelectorAll(".king").length;
+      setChartData({
+        labels: ['Pawns', 'Bishops', 'Knights', 'Rooks', 'Queens', 'Kings'],
+        datasets:[
+          {
+            label: 'Кількість',
+            data: [pawns, bishops, knights, rooks, queens, kings],
+            borderColor: 'rgb(118, 150, 86)',
+            backgroundColor: ['rgb(118, 150, 86)','rgb(118, 150, 86)','rgb(118, 150, 86)','rgb(118, 150, 86)','rgb(118, 150, 86)','rgb(118, 150, 86)'],
+          },
+        ],
+      })
+      setChartOptions({
+      responsive:true,
+      plugins:{
+        legend:{
+          position:'top'
+        },
+        title:{
+          display:true,
+          text:'Фігури на дошці'
+        }
+      },
+      scales: {
+        y:{
+          beginAtZero: true,
+          ticks:{
+            callback: function(value,index){
+              console.log(this.getLabelForValue(index));
+              return index%2?null:value;
             }
-        });
-        return(
-            <div class="chart-container">
-                <canvas id="my-chart"></canvas>
-            </div>
-        );
-    }
+          }
+        }
+      }
+    })
+    }, 1);
+    
+  },[])
+ 
+  return (
+    <div className="chart-container">
+      <Bar height={300} width={300} options={chartOptions} data={chartData}/>
+    </div>
+  );
 }
 
 export default Chart;
-
-
-// const pawns = document.querySelectorAll("#pawn").length,
-// bishops = document.querySelectorAll("#bishop").length,
-// knights = document.querySelectorAll("#knight").length,
-// rooks = document.querySelectorAll("#rook").length,
-// queens = document.querySelectorAll("#queen").length,
-// kings = document.querySelectorAll("#king").length;
-// let myChart = document.getElementById("my-chart").getContext('2d');
-// let chessChart = new Chart(myChart, {
-// type: 'bar',
-// data: {
-//     labels: ['Pawns', 'Bishops', 'Knights', 'Rooks', 'Queens', 'Kings'],
-//     datasets: [{
-//         label: 'Amount',
-//         data: [pawns, bishops, knights, rooks, queens, kings],
-//         // data: [pawns, 3, 2, 1, 5, kings],
-//         backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
-//     }]
-// },
-// options: {
-// }
-// });
