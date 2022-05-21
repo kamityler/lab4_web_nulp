@@ -2,12 +2,15 @@ import React,{useState} from 'react'
 
 import './navbar.css'
 import Modal from '../modal/modal';
-import Form from '../form/form';
+import Form from '../form-sign/form';
+import Sign from '../form-sign/sign';
 
 
 
 const NavBar = () => {
-    const [modalActive, setModalActive] = useState(false);
+    const [modalActive1, setModalActive1] = useState(false);
+    const [modalActive2, setModalActive2] = useState(false);
+
     return(
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
@@ -27,11 +30,12 @@ const NavBar = () => {
                     <a className="nav-link" href="https://www.chess.com/puzzles/problem/491418">Завдання</a>
                     </li>
                 </ul>
-                <button className="btn btn-outline me-2" type="button" onClick={()=>setModalActive(true)}>Зареєструватись</button>
-                <button className="btn btn-outline" type="button">Ввійти</button>
+                <button className="btn btn-outline me-2" type="button" onClick={()=>setModalActive1(true)}>Зареєструватись</button>
+                <button className="btn btn-outline" type="button" onClick={()=>setModalActive2(true)}>Ввійти</button>
                 </div>
             </div>
-            <Modal active={modalActive} setActive={setModalActive}><Form/></Modal>
+            <Modal active={modalActive1} setActive={setModalActive1}><Form/></Modal>
+            <Modal active={modalActive2} setActive={setModalActive2}><Sign/></Modal>
         </nav>
     );
 }

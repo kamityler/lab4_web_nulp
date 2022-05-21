@@ -26,8 +26,10 @@
     transform: scale(0.5);
     transition: 0.4s all;
     width: 400px;
+    pointer-events: none;
 }
 
 .modal-content.active{
     transform: scale(1);
+    pointer-events: all;
 }

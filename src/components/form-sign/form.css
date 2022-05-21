@@ -13,7 +13,7 @@ label{
     text-align: center;
 }
 
-#pass-vis{
+.checkbox-pass-vis{
     margin-top:8px;
     margin-right:8px;
 }
@@ -55,3 +55,14 @@ label{
     margin-left: 40px;
 }
 
+.incorrect-pass{
+    border: 2px solid red;
+}
+
+.incorrect-pass{
+    border: 3px solid red;
+}
+
+.correct-pass{
+    border: 3px solid green;
+}
