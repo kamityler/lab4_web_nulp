@@ -64,7 +64,7 @@ function Chart(props) {
           beginAtZero: true,
           ticks:{
             callback: function(value,index){
-              console.log(this.getLabelForValue(index));
+              //console.log(this.getLabelForValue(index));
               return index%2?null:value;
             }
           }

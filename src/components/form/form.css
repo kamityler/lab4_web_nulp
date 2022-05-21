@@ -1,0 +1,57 @@
+input{
+    float: right;
+    border-radius: 10px;
+    border: solid 1px grey;
+    padding-left: 7px;
+}
+
+label{
+    float:left;
+}
+
+.form-label{
+    text-align: center;
+}
+
+#pass-vis{
+    margin-top:8px;
+    margin-right:8px;
+}
+
+#user-file{
+    font-size: 14px;
+    border: none;
+    width:250px
+}
+
+.form-btn{
+    border-radius: 10px;
+    margin: 0px 10px;
+    border: solid 1px;
+    color: black;
+    padding: 5px 15px
+}
+
+.form-btn:active{
+    background-color: rgb(202, 202, 202);
+}
+
+.submit:focus, .reset:focus{
+    background-color: none;
+    color: black;
+    outline: none;
+    box-shadow: none;
+}
+
+.submit:hover{
+    color:green;
+}
+
+.reset:hover{
+    color:rgb(158, 105, 6);
+}
+
+.reset{
+    margin-left: 40px;
+}
+
