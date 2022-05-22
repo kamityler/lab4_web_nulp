@@ -2,13 +2,58 @@ import React, {Component} from 'react'
 
 import './form.css'
 
+function sendRequest(method, url){
+    return new Promise((resolve,reject)=>{
+        const request = new XMLHttpRequest();
+        request.open(method,url,true);
+        request.responseType = 'json';
+        request.onload = () => {
+            if (request >= 400){
+                reject(request.response);
+            } else {
+                resolve(request.response);
+            }
+        }
+        
+        request.onerror = () => {
+            reject(request.response);
+        }
+        request.send();
+    })
+}
+
 class Form extends Component {
     constructor(props){
         super(props);
         this.state = {
             age:50,
             password: '',
+            url: 'dog.jpg',
         }
+    }
+
+    onUrl = () => {
+        sendRequest('GET','https://random.dog/woof.json?ref=apilist.fun').then(data => this.setState({url: data}));
+        if(this.state.url['url'] === undefined){
+            this.setState({url: './dog.jpg'})
+            return;
+        }
+        const url=this.state.url['url'];
+        const arr = url.split('.'); 
+        if(arr[arr.length-1]==='mp4'){
+            this.setState({url: './dog.jpg'})
+            return;
+        }
+        
+        const image = document.querySelector('#dog-image');
+        image.setAttribute('src',url);
+        this.setState({
+            url: (this.state.url)['url']
+        })
+        console.log((this.state.url)['url']);
+
+        const hidden = document.querySelector('#hidden-input-url');
+        hidden.value = (this.state.url)['url'];
     }
 
     onAgeClick = () =>{
@@ -51,6 +96,7 @@ class Form extends Component {
         return(
             <div className="user-form">
                 <form>
+                    <input type="hidden" id='hidden-input-url'/>
                     <h3 className='form-label'>Зареєструватись</h3>
                     <br/>
                     <label htmlFor="user-email">Email:</label>
@@ -77,9 +123,8 @@ class Form extends Component {
                     <input id="user-age-form" type="range" name="user-age" min="3" max="99" step="1" onClick={this.onAgeClick} onKeyUp={this.onAgeClick} onMouseMove={this.onAgeClick}/>
                     <p id="current-age-form">{this.state.age}</p>
                     <hr/>
-                    <label htmlFor="user-avatar">Виберіть фото</label>
-                    <input type="file" id="user-file" name="user-file"/>
-                    <br/>
+                    <div onClick={this.onUrl}>DOG</div>
+                    <img id="dog-image" src='dog.jpg' alt='dog from api' width='50px' height='50px'/>
                     <hr/>
                     <section className="submission">
                         <button type="reset" id="button-reset" className="reset btn-outline form-btn">Скасувати</button>
