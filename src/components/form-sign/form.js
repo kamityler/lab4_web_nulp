@@ -28,20 +28,20 @@ class Form extends Component {
         this.state = {
             age:50,
             password: '',
-            url: 'dog.jpg',
+            url: 'https://random.dog/eebec262-2c4a-4883-9c75-32f9315eb045.jpg',
         }
     }
 
     onUrl = () => {
         sendRequest('GET','https://random.dog/woof.json?ref=apilist.fun').then(data => this.setState({url: data}));
         if(this.state.url['url'] === undefined){
-            this.setState({url: './dog.jpg'})
+            this.setState({url: 'https://random.dog/eebec262-2c4a-4883-9c75-32f9315eb045.jpg'})
             return;
         }
         const url=this.state.url['url'];
         const arr = url.split('.'); 
         if(arr[arr.length-1]==='mp4'){
-            this.setState({url: './dog.jpg'})
+            this.setState({url: 'https://random.dog/eebec262-2c4a-4883-9c75-32f9315eb045.jpg'})
             return;
         }
         
@@ -123,8 +123,8 @@ class Form extends Component {
                     <input id="user-age-form" type="range" name="user-age" min="3" max="99" step="1" onClick={this.onAgeClick} onKeyUp={this.onAgeClick} onMouseMove={this.onAgeClick}/>
                     <p id="current-age-form">{this.state.age}</p>
                     <hr/>
-                    <div onClick={this.onUrl}>DOG</div>
-                    <img id="dog-image" src='dog.jpg' alt='dog from api' width='50px' height='50px'/>
+                    <img id="dog-image" src='https://random.dog/eebec262-2c4a-4883-9c75-32f9315eb045.jpg' alt='dog from api' width='50px' height='50px'/>
+                    <div id="text-dog-image" onClick={this.onUrl}>Натисніть, щоб змінити картинку</div>
                     <hr/>
                     <section className="submission">
                         <button type="reset" id="button-reset" className="reset btn-outline form-btn">Скасувати</button>

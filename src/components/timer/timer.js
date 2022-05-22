@@ -39,7 +39,6 @@ class Timer extends Component{
                 this.changeClass();
                 clearInterval(timer);
             }
-            console.log(this.state.sec);
         },100)
 
         if(parseInt(this.state.sec) <= 1){
