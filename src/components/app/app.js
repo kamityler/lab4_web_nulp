@@ -1,9 +1,10 @@
 import React from 'react'
-
 import ChessTable from '../chess-table/chess-table';
 import NavBar from '../navbar/navbar';
 import Timer from '../timer/timer';
 import Chart from '../chart/chart';
+
+
 
 import './app.css'
 

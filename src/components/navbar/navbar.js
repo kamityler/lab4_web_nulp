@@ -8,7 +8,7 @@ import Sign from '../form-sign/sign';
 
 
 const NavBar = () => {
-    const [modalActive1, setModalActive1] = useState(false);
+    const [modalActive1,setModalActive1] = useState(false);
     const [modalActive2, setModalActive2] = useState(false);
 
     return(
@@ -30,7 +30,7 @@ const NavBar = () => {
                     <a className="nav-link" href="https://www.chess.com/puzzles/problem/491418">Завдання</a>
                     </li>
                 </ul>
-                <button className="btn btn-outline me-2" type="button" onClick={()=>setModalActive1(true)}>Зареєструватись</button>
+                <button className="btn btn-outline me-2" type="button" onClick={()=>{modalActive1?setModalActive1(false):setModalActive1(true)}}>Зареєструватись</button>
                 <button className="btn btn-outline" type="button" onClick={()=>setModalActive2(true)}>Ввійти</button>
                 </div>
             </div>

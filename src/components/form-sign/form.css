@@ -4,6 +4,10 @@ input{
     border: solid 1px grey;
     padding-left: 7px;
 }
+input:focus{
+    outline: none;
+    box-shadow: none;
+}
 
 label{
     float:left;
@@ -77,5 +81,10 @@ label{
 }
 
 #text-dog-image{
+    text-align: center;
+}
+
+#error-msg{
+    color: red;
     text-align: center;
 }
