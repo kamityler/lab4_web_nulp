@@ -66,7 +66,7 @@ export default class Form extends Component {
                 },
               });
               console.log(response.data)
-              alert("привіт користувач"+response.data.data.email+"\nтвій вік" +response.data.data.age)
+              alert("привіт користувач "+response.data.data.email+"\nтвій вік " +response.data.data.age)
               document.querySelectorAll('.modal-content')[0].classList.remove('active');
               document.querySelectorAll('.modal')[0].classList.remove('active');
               document.querySelector('#signUp-form').reset();

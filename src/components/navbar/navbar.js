@@ -32,6 +32,7 @@ const NavBar = () => {
                 </ul>
                 <button className="btn btn-outline me-2" type="button" onClick={()=>{modalActive1?setModalActive1(false):setModalActive1(true)}}>Зареєструватись</button>
                 <button className="btn btn-outline" type="button" onClick={()=>setModalActive2(true)}>Ввійти</button>
+                <button className="btn btn-outline" type="button" onClick={()=>setModalActive2(true)}>БД</button>
                 </div>
             </div>
             <Modal active={modalActive1} setActive={setModalActive1}><Form/></Modal>
